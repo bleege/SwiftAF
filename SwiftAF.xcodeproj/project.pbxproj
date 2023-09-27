@@ -11,6 +11,7 @@
 		A2D21FEF2AC3B2E5001633BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D21FEE2AC3B2E5001633BC /* ContentView.swift */; };
 		A2D21FF12AC3B2E6001633BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D21FF02AC3B2E6001633BC /* Assets.xcassets */; };
 		A2D21FF42AC3B2E6001633BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D21FF32AC3B2E6001633BC /* Preview Assets.xcassets */; };
+		A2D21FFC2AC3B749001633BC /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = A2D21FFB2AC3B749001633BC /* AFNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A2D21FEE2AC3B2E5001633BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2D21FF02AC3B2E6001633BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2D21FF32AC3B2E6001633BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2D21FFD2AC3B867001633BC /* SwiftAF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SwiftAF-Bridging-Header.h"; path = "SwiftAF/SwiftAF-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D21FFC2AC3B749001633BC /* AFNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +38,7 @@
 		A2D21FE02AC3B2E5001633BC = {
 			isa = PBXGroup;
 			children = (
+				A2D21FFD2AC3B867001633BC /* SwiftAF-Bridging-Header.h */,
 				A2D21FEB2AC3B2E5001633BC /* SwiftAF */,
 				A2D21FEA2AC3B2E5001633BC /* Products */,
 			);
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = SwiftAF;
+			packageProductDependencies = (
+				A2D21FFB2AC3B749001633BC /* AFNetworking */,
+			);
 			productName = SwiftAF;
 			productReference = A2D21FE92AC3B2E5001633BC /* SwiftAF.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = A2D21FE02AC3B2E5001633BC;
+			packageReferences = (
+				A2D21FFA2AC3B749001633BC /* XCRemoteSwiftPackageReference "AFNetworking" */,
+			);
 			productRefGroup = A2D21FEA2AC3B2E5001633BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,7 +297,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.leege.SwiftAF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "SwiftAF/SwiftAF-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +330,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.leege.SwiftAF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "SwiftAF/SwiftAF-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2D21FFA2AC3B749001633BC /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2D21FFB2AC3B749001633BC /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2D21FFA2AC3B749001633BC /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2D21FE12AC3B2E5001633BC /* Project object */;
 }
